@@ -15,15 +15,20 @@
     <div class="form-group">
       <input type="text" placeholder="search term" id="searchTerm" class="form-control">
     </div>
-    {{searchTerm}}
     <div class="form-group narrow-button">
       <button class="btn btn-primary" ng-click="myCtrl.logMenuItems()">Narrow It Down For Me!</button>
-    </div>
-    {{myCtrl.menu}}
+    </div> <br><br><br><br>
+    <!-- {{myCtrl.menu}} -->
     <!-- found-items should be implemented as a component -->
-    <li ng-repeat='myCtrl.menu as item'>
+    <p ng-if="myCtrl.dataEmpty && myCtrl.menu.length===0">Nothing found</p>
+    <ul ng-if="myCtrl.menu">
+      <li ng-repeat='item in myCtrl.menu'>{{item.name}}, {{item.short_name}}, {{item.description}}
+        <button class="btn btn-primary" ng-click="myCtrl.deleteMenuItems(item.id)">Don't want this one!</button>
+      </li>
+    </ul>
+    <!-- <li ng-repeat='myCtrl.menu as item'>
       {{item}}
-    </li>
+    </li> -->
     <!-- <found-items found-items="...." on-remove="...."></found-items> -->
   </div>
 
