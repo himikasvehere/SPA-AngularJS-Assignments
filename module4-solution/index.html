@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html ng-app='MenuApp'>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="css/styles.css">
+    <title>Module4 Assignment</title>
+
+  </head>
+  <body>
+    <div class="tabs">
+      <!-- <a ui-sref="tab1">Tab1</a>
+      <a ui-sref="tab2">Tab2</a> -->
+    </div>
+    <ui-view></ui-view>
+    <!-- Libraries -->
+    <script src="lib/angular.min.js"></script>
+    <script src="lib/angular-ui-router.min.js"></script>
+    <!-- Modules -->
+    <script src="src/menulist.module.js"></script>
+    <!-- <script src="src/menulist.component.js"></script> -->
+    <script src="src/menulist.service.js"></script>
+    <script src="src/categories-list.controller.js"></script>
+    <script src="src/item.controller.js"></script>
+
+    <!-- Routes -->
+    <script src="src/routes.js"></script>
+
+  </body>
+</html>
